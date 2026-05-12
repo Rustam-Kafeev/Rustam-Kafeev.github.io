@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Кафеев Рустам | Frontend-разработчик — Портфолио</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #0b0f17;
+      color: #e6edf3;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Навигация */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(11, 15, 23, 0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      z-index: 100;
+      padding: 16px 0;
+    }
+
+    .navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.2rem;
+      letter-spacing: -0.3px;
+      background: linear-gradient(135deg, #7aa2f7, #bb9af7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #9aa5b6;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #7aa2f7;
+    }
+
+    section {
+      padding: 90px 0 70px;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 80px;
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .greeting {
+      font-family: 'Fira Code', monospace;
+      color: #7aa2f7;
+      font-size: 1rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.8rem, 7vw, 4.5rem);
+      font-weight: 700;
+      letter-spacing: -1.5px;
+      line-height: 1.1;
+      background: linear-gradient(to right, #e6edf3, #9aa5b6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero h2 {
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      font-weight: 500;
+      color: #7aa2f7;
+      letter-spacing: -0.5px;
+    }
+
+    .hero p {
+      max-width: 580px;
+      font-size: 1.1rem;
+      color: #9aa5b6;
+      margin: 12px 0 24px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .btn-primary, .btn-outline {
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: all 0.25s;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: #7aa2f7;
+      color: #0b0f17;
+      border: none;
+      box-shadow: 0 4px 14px rgba(122, 162, 247, 0.3);
+    }
+
+    .btn-primary:hover {
+      background: #89b4ff;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(122, 162, 247, 0.45);
+    }
+
+    .btn-outline {
+      border: 1px solid #30363d;
+      color: #c9d1d9;
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      border-color: #7aa2f7;
+      color: #7aa2f7;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 40px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: #7aa2f7;
+      border-radius: 3px;
+    }
+
+    /* Обо мне */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-text p {
+      color: #b4c0d0;
+      margin-bottom: 18px;
+      font-size: 1.05rem;
+    }
+
+    .about-highlights {
+      background: #131a26;
+      border-radius: 16px;
+      padding: 28px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .highlight-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+      color: #c9d1d9;
+    }
+
+    .highlight-icon {
+      font-size: 1.6rem;
+    }
+
+    /* Навыки */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 18px;
+    }
+
+    .skill-card {
+      background: #131a26;
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      border-radius: 14px;
+      padding: 22px 16px;
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    .skill-card:hover {
+      border-color: #7aa2f7;
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+    }
+
+    .skill-icon {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    .skill-name {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    /* Проекты */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
+    }
+
+    .project-card {
+      background: #131a26;
+      border-radius: 18px;
+      padding: 28px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s;
+    }
+
+    .project-card:hover {
+      border-color: #30363d;
+      box-shadow: 0 18px 30px -12px rgba(0,0,0,0.6);
+      transform: translateY(-4px);
+    }
+
+    .project-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .project-icon {
+      font-size: 1.8rem;
+    }
+
+    .project-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #e6edf3;
+    }
+
+    .project-description {
+      color: #9aa5b6;
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+      flex: 1;
+    }
+
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 22px;
+    }
+
+    .tech-tag {
+      background: rgba(122, 162, 247, 0.12);
+      color: #7aa2f7;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 16px;
+      margin-top: auto;
+    }
+
+    .project-links a {
+      color: #c9d1d9;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+
+    .project-links a:hover {
+      color: #7aa2f7;
+    }
+
+    /* Контакты */
+    .contact-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: space-between;
+      align-items: center;
+      background: #131a26;
+      border-radius: 18px;
+      padding: 40px;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .contact-info p {
+      color: #b4c0d0;
+      margin: 6px 0;
+    }
+
+    .contact-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .contact-links a {
+      color: #9aa5b6;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .contact-links a:hover {
+      color: #7aa2f7;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 0;
+      color: #484f5a;
+      font-size: 0.85rem;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      margin-top: 30px;
+    }
+
+    @media (max-width: 700px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      .nav-links {
+        gap: 14px;
+      }
+      .contact-flex {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">RK</div>
+      <ul class="nav-links">
+        <li><a href="#about">Обо мне</a></li>
+        <li><a href="#skills">Навыки</a></li>
+        <li><a href="#projects">Проекты</a></li>
+        <li><a href="#contact">Контакты</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-content">
+        <span class="greeting">👋 Привет, я</span>
+        <h1>Кафеев Рустам Рамильевич</h1>
+        <h2>Frontend-разработчик</h2>
+        <p>
+          Разрабатываю отзывчивые веб-приложения с акцентом на React и TypeScript.
+          Уверенно работаю с Python/Django, что позволяет глубже понимать полный цикл продукта.
+          Изучаю новое каждый день, сейчас активно погружаюсь в бэкенд-технологии.
+        </p>
+        <div class="cta-buttons">
+          <a href="#projects" class="btn-primary">Мои проекты</a>
+          <a href="https://github.com/Rustam-Kafeev" target="_blank" rel="noopener" class="btn-outline">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Обо мне -->
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">Обо мне</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              Я целеустремлённый разработчик из Челябинска. Мой путь начался с вёрстки и JavaScript,
+              а сейчас я создаю полноценные приложения на React и Django.
+              Мне нравится, когда интерфейс не просто работает, а делает это красиво и предсказуемо.
+            </p>
+            <p>
+              Благодаря моим проектам на Python я вижу картину целиком — от API до кнопки на экране.
+              Открыт к работе в команде, где ценят чистый код, тестирование и взаимопомощь.
+            </p>
+          </div>
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <span class="highlight-icon">⚛️</span>
+              <span>Стек: React, TypeScript, Redux</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">🐍</span>
+              <span>Backend: Python, Django, REST API</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">🚀</span>
+              <span>Активная разработка на GitHub</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">📘</span>
+              <span>Люблю чистую архитектуру и документацию</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Навыки -->
+    <section id="skills">
+      <div class="container">
+        <h2 class="section-title">Навыки и инструменты</h2>
+        <div class="skills-grid">
+          <div class="skill-card"><div class="skill-icon">⚛️</div><div class="skill-name">React</div></div>
+          <div class="skill-card"><div class="skill-icon">🟦</div><div class="skill-name">TypeScript</div></div>
+          <div class="skill-card"><div class="skill-icon">🟩</div><div class="skill-name">Vue.js</div></div>
+          <div class="skill-card"><div class="skill-icon">🐍</div><div class="skill-name">Python</div></div>
+          <div class="skill-card"><div class="skill-icon">🎯</div><div class="skill-name">Django</div></div>
+          <div class="skill-card"><div class="skill-icon">🔗</div><div class="skill-name">REST API</div></div>
+          <div class="skill-card"><div class="skill-icon">🐘</div><div class="skill-name">PostgreSQL</div></div>
+          <div class="skill-card"><div class="skill-icon">🍃</div><div class="skill-name">MongoDB</div></div>
+          <div class="skill-card"><div class="skill-icon">🐳</div><div class="skill-name">Docker</div></div>
+          <div class="skill-card"><div class="skill-icon">🧪</div><div class="skill-name">Jest / Pytest</div></div>
+          <div class="skill-card"><div class="skill-icon">🎨</div><div class="skill-name">Tailwind / SCSS</div></div>
+          <div class="skill-card"><div class="skill-icon">⚙️</div><div class="skill-name">Git / CI/CD</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Проекты (реальные репозитории Rustam-Kafeev) -->
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-title">Проекты с GitHub</h2>
+        <div class="projects-grid">
+          <!-- Проект 1: YaCut -->
+          <div class="project-card">
+            <div class="project-header">
+              <span class="project-icon">✂️</span>
+              <h3 class="project-title">YaCut</h3>
+            </div>
+            <p class="project-description">
+              Сервис сокращения ссылок с генерацией коротких идентификаторов и REST API.
+              Реализован бэкенд на Flask, валидация данных и взаимодействие с базой через SQLAlchemy.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Flask</span>
+              <span class="tech-tag">SQLAlchemy</span>
+              <span class="tech-tag">REST API</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Rustam-Kafeev/YaCut-main" target="_blank" rel="noopener">📁 Исходный код</a>
+            </div>
+          </div>
+          <!-- Проект 2: TaskTracker -->
+          <div class="project-card">
+            <div class="project-header">
+              <span class="project-icon">✅</span>
+              <h3 class="project-title">TaskTracker</h3>
+            </div>
+            <p class="project-description">
+              Планировщик задач с возможностью создавать, редактировать и отслеживать прогресс выполнения.
+              Асинхронная обработка и API для интеграции с фронтендом.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Django</span>
+              <span class="tech-tag">SQLite</span>
+              <span class="tech-tag">Bootstrap</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Rustam-Kafeev/TaskTracker" target="_blank" rel="noopener">📁 Исходный код</a>
+            </div>
+          </div>
+          <!-- Проект 3: yandex-browser -->
+          <div class="project-card">
+            <div class="project-header">
+              <span class="project-icon">🌐</span>
+              <h3 class="project-title">yandex-browser</h3>
+            </div>
+            <p class="project-description">
+              Кастомная сборка браузера с расширенными функциями парсинга и автоматизации.
+              Инструмент для работы с веб-контентом и обхода динамических страниц.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Selenium</span>
+              <span class="tech-tag">BeautifulSoup</span>
+              <span class="tech-tag">Автоматизация</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Rustam-Kafeev/yandex-browser" target="_blank" rel="noopener">📁 Исходный код</a>
+            </div>
+          </div>
+        </div>
+        <p style="margin-top: 30px; color: #9aa5b6; font-size: 0.95rem;">
+          ⚡ Больше кода и экспериментов в моём профиле: 
+          <a href="https://github.com/Rustam-Kafeev?tab=repositories" target="_blank" rel="noopener" style="color:#7aa2f7;">github.com/Rustam-Kafeev</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">Связаться</h2>
+        <div class="contact-flex">
+          <div class="contact-info">
+            <p><strong>📍 Челябинск / Удалённо</strong></p>
+            <p>✉️ krr12@mail.ru</p>
+            <p>💬 Telegram: @KafRus74</p>
+          </div>
+          <div class="contact-links">
+            <a href="https://github.com/Rustam-Kafeev" target="_blank" rel="noopener">🐙 GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 Кафеев Рустам Рамильевич — создано с акцентом на качество кода.
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const href = this.getAttribute('href');
+          if (href === "#") return;
+          const target = document.querySelector(href);
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('.nav-links a');
+      window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop - 150;
+          if (scrollY >= sectionTop) {
+            current = section.getAttribute('id');
+          }
+        });
+        navLinks.forEach(link => {
+          link.style.color = '';
+          if (link.getAttribute('href') === `#${current}`) {
+            link.style.color = '#7aa2f7';
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
