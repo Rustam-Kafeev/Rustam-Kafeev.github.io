@@ -2,958 +2,1130 @@
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Рустам Кафеев | Fullstack-разработчик | Челябинск</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --dark-bg: #0b0f17;
-            --dark-surface: #131a26;
-            --dark-text: #e6edf3;
-            --dark-text-secondary: #9aa5b6;
-            --dark-accent: #7aa2f7;
-            --dark-accent2: #bb9af7;
-            --dark-border: rgba(255, 255, 255, 0.06);
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-            --light-bg: #f5f7fa;
-            --light-card-bg: #ffffff;
-            --light-text: #1a1a2e;
-            --light-text-secondary: #555;
-            --light-accent: #4f46e5;
-            --light-accent2: #7c3aed;
-            --light-accent-light: #e0e7ff;
-            --light-border: #e5e7eb;
-            --light-tag-bg: #f1f5f9;
-            --light-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
-        }
+   <!-- SEO: Мета-теги -->
+   <title>Рустам Кафеев | Fullstack-разработчик Python / TypeScript / Go | Челябинск</title>
+   <meta name="description"
+      content="Fullstack-разработчик из Челябинска. Разрабатываю веб-приложения полного цикла на Python, TypeScript и Go. Создаю REST API, микросервисы, SPA. Открыт к проектам и офферам по РФ и удалённо.">
+   <meta name="keywords"
+      content="fullstack-разработчик, python разработчик, челябинск, django, flask, fastapi, react, typescript, go разработчик, rest api, веб-разработка, заказать сайт, фриланс, рустам кафеев">
+   <meta name="author" content="Рустам Кафеев">
+   <meta name="robots" content="index, follow">
+   <link rel="canonical" href="https://rustam-kafeev.github.io/">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+   <!-- Open Graph для социальных сетей -->
+   <meta property="og:title" content="Рустам Кафеев | Fullstack-разработчик | Челябинск">
+   <meta property="og:description"
+      content="Fullstack-разработчик из Челябинска. Разрабатываю веб-приложения полного цикла на Python, TypeScript и Go.">
+   <meta property="og:type" content="website">
+   <meta property="og:url" content="https://rustam-kafeev.github.io/">
+   <meta property="og:locale" content="ru_RU">
+   <meta property="og:site_name" content="Рустам Кафеев — Портфолио">
 
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-            min-height: 100vh;
-            transition: background 0.4s ease, color 0.4s ease;
-        }
+   <!-- Twitter Card -->
+   <meta name="twitter:card" content="summary">
+   <meta name="twitter:title" content="Рустам Кафеев | Fullstack-разработчик | Челябинск">
+   <meta name="twitter:description"
+      content="Fullstack-разработчик из Челябинска. Python, TypeScript, Go. Открыт к проектам по РФ и удалённо.">
 
-        body.dark-mode {
-            background: var(--dark-bg);
-            color: var(--dark-text);
+   <!-- Структурированные данные JSON-LD (Schema.org Person) -->
+   <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Рустам Кафеев",
+            "givenName": "Рустам",
+            "familyName": "Кафеев",
+            "jobTitle": "Fullstack-разработчик",
+            "description": "Fullstack-разработчик из Челябинска. Специализируюсь на Python, TypeScript и Go. Разрабатываю веб-приложения полного цикла, REST API и микросервисы.",
+            "url": "https://rustam-kafeev.github.io/",
+            "sameAs": [
+                "https://github.com/Rustam-Kafeev"
+            ],
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Челябинск",
+                "addressCountry": "RU"
+            },
+            "email": "krr12@mail.ru",
+            "telephone": "Telegram: @KafRus74",
+            "knowsAbout": [
+                "Python",
+                "TypeScript",
+                "Go",
+                "Django",
+                "Flask",
+                "FastAPI",
+                "React",
+                "Next.js",
+                "REST API",
+                "GraphQL",
+                "Docker",
+                "PostgreSQL",
+                "MongoDB",
+                "Linux",
+                "CI/CD"
+            ],
+            "alumniOf": {
+                "@type": "EducationalOrganization",
+                "name": "Челябинск"
+            }
         }
+    </script>
 
-        body.light-mode {
-            background: linear-gradient(135deg, #eef2ff 0%, #f9fafb 100%);
-            color: var(--light-text);
+   <!-- Структурированные данные для сайта-портфолио -->
+   <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Рустам Кафеев — Портфолио Fullstack-разработчика",
+            "url": "https://rustam-kafeev.github.io/",
+            "description": "Портфолио fullstack-разработчика из Челябинска. Python, TypeScript, Go. Проекты, навыки и контакты.",
+            "inLanguage": "ru"
         }
+    </script>
 
-        /* Навигация */
-        .navbar {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
-            border-bottom: 1px solid transparent;
-            padding: 14px 0;
-            transition: background 0.3s;
-        }
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet">
+   <style>
+      :root {
+         --dark-bg: #0b0f17;
+         --dark-surface: #131a26;
+         --dark-text: #e6edf3;
+         --dark-text-secondary: #9aa5b6;
+         --dark-accent: #7aa2f7;
+         --dark-accent2: #bb9af7;
+         --dark-border: rgba(255, 255, 255, 0.06);
 
-        body.dark-mode .navbar {
-            background: rgba(11, 15, 23, 0.88);
-            border-bottom-color: var(--dark-border);
-        }
+         --light-bg: #f5f7fa;
+         --light-card-bg: #ffffff;
+         --light-text: #1a1a2e;
+         --light-text-secondary: #555;
+         --light-accent: #4f46e5;
+         --light-accent2: #7c3aed;
+         --light-accent-light: #e0e7ff;
+         --light-border: #e5e7eb;
+         --light-tag-bg: #f1f5f9;
+         --light-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+      }
 
-        body.light-mode .navbar {
-            background: rgba(255, 255, 255, 0.8);
-            border-bottom-color: var(--light-border);
-        }
+      * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+      }
 
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 16px;
-        }
+      body {
+         font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+         line-height: 1.6;
+         -webkit-font-smoothing: antialiased;
+         min-height: 100vh;
+         transition: background 0.4s ease, color 0.4s ease;
+      }
 
-        .logo {
-            font-weight: 700;
-            font-size: 1.3rem;
-            letter-spacing: -0.3px;
-        }
+      body.dark-mode {
+         background: var(--dark-bg);
+         color: var(--dark-text);
+      }
 
-        body.dark-mode .logo {
-            background: linear-gradient(135deg, #7aa2f7, #bb9af7);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
+      body.light-mode {
+         background: linear-gradient(135deg, #eef2ff 0%, #f9fafb 100%);
+         color: var(--light-text);
+      }
 
-        body.light-mode .logo {
-            color: var(--light-accent);
-        }
+      /* Навигация */
+      .navbar {
+         position: sticky;
+         top: 0;
+         z-index: 100;
+         backdrop-filter: blur(14px);
+         -webkit-backdrop-filter: blur(14px);
+         border-bottom: 1px solid transparent;
+         padding: 14px 0;
+         transition: background 0.3s;
+      }
 
-        .nav-links {
-            display: flex;
-            gap: 20px;
-            list-style: none;
-            flex-wrap: wrap;
-        }
+      body.dark-mode .navbar {
+         background: rgba(11, 15, 23, 0.88);
+         border-bottom-color: var(--dark-border);
+      }
 
-        .nav-links a {
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9rem;
-            transition: color 0.2s;
-        }
+      body.light-mode .navbar {
+         background: rgba(255, 255, 255, 0.8);
+         border-bottom-color: var(--light-border);
+      }
 
-        body.dark-mode .nav-links a {
-            color: #9aa5b6;
-        }
-        body.dark-mode .nav-links a:hover {
-            color: #7aa2f7;
-        }
-        body.light-mode .nav-links a {
-            color: #555;
-        }
-        body.light-mode .nav-links a:hover {
-            color: var(--light-accent);
-        }
+      .nav-container {
+         max-width: 1200px;
+         margin: 0 auto;
+         padding: 0 24px;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         flex-wrap: wrap;
+         gap: 16px;
+      }
 
-        .theme-toggle {
-            background: none;
-            border: 1px solid;
-            border-radius: 30px;
-            padding: 6px 14px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 0.85rem;
-            transition: all 0.2s;
-            font-family: inherit;
-        }
+      .logo {
+         font-weight: 700;
+         font-size: 1.3rem;
+         letter-spacing: -0.3px;
+      }
 
-        body.dark-mode .theme-toggle {
-            border-color: #30363d;
-            color: #c9d1d9;
-        }
-        body.dark-mode .theme-toggle:hover {
-            border-color: #7aa2f7;
-            color: #7aa2f7;
-        }
-        body.light-mode .theme-toggle {
-            border-color: var(--light-border);
-            color: var(--light-text);
-            background: #fff;
-        }
-        body.light-mode .theme-toggle:hover {
-            border-color: var(--light-accent);
-            color: var(--light-accent);
-        }
+      body.dark-mode .logo {
+         background: linear-gradient(135deg, #7aa2f7, #bb9af7);
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+         background-clip: text;
+      }
 
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 60px 24px;
-        }
+      body.light-mode .logo {
+         color: var(--light-accent);
+      }
 
-        /* Герой */
-        .hero {
-            display: flex;
-            align-items: center;
-            min-height: 90vh;
-            padding-top: 60px;
-        }
+      .nav-links {
+         display: flex;
+         gap: 20px;
+         list-style: none;
+         flex-wrap: wrap;
+      }
 
-        .hero-content {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
+      .nav-links a {
+         text-decoration: none;
+         font-weight: 500;
+         font-size: 0.9rem;
+         transition: color 0.2s;
+      }
 
-        .hero-header {
-            display: flex;
-            align-items: center;
-            gap: 24px;
-            flex-wrap: wrap;
-        }
+      body.dark-mode .nav-links a {
+         color: #9aa5b6;
+      }
 
-        .avatar {
-            width: 100px;
-            height: 100px;
-            border-radius: 28px;
-            background: linear-gradient(145deg, #7aa2f7, #bb9af7);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 42px;
-            font-weight: 700;
-            color: #fff;
-            flex-shrink: 0;
-            box-shadow: 0 10px 25px rgba(122, 162, 247, 0.3);
-        }
+      body.dark-mode .nav-links a:hover {
+         color: #7aa2f7;
+      }
 
-        body.light-mode .avatar {
-            background: linear-gradient(145deg, #4f46e5, #7c3aed);
-            box-shadow: 0 10px 25px rgba(79, 70, 229, 0.3);
-        }
+      body.light-mode .nav-links a {
+         color: #555;
+      }
 
-        .greeting {
-            font-family: 'Fira Code', monospace;
-        }
+      body.light-mode .nav-links a:hover {
+         color: var(--light-accent);
+      }
 
-        body.dark-mode .greeting {
-            color: var(--dark-accent);
-        }
-        body.light-mode .greeting {
-            color: var(--light-accent);
-        }
+      .theme-toggle {
+         background: none;
+         border: 1px solid;
+         border-radius: 30px;
+         padding: 6px 14px;
+         cursor: pointer;
+         font-weight: 600;
+         font-size: 0.85rem;
+         transition: all 0.2s;
+         font-family: inherit;
+      }
 
-        .hero h1 {
-            font-size: clamp(2.8rem, 7vw, 4.8rem);
-            font-weight: 700;
-            letter-spacing: -1.8px;
-            line-height: 1.1;
-        }
+      body.dark-mode .theme-toggle {
+         border-color: #30363d;
+         color: #c9d1d9;
+      }
 
-        body.dark-mode .hero h1 {
-            background: linear-gradient(to right, #e6edf3, #9aa5b6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
+      body.dark-mode .theme-toggle:hover {
+         border-color: #7aa2f7;
+         color: #7aa2f7;
+      }
 
-        body.light-mode .hero h1 {
-            background: linear-gradient(to right, #4f46e5, #7c3aed);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
+      body.light-mode .theme-toggle {
+         border-color: var(--light-border);
+         color: var(--light-text);
+         background: #fff;
+      }
 
-        .hero h2 {
-            font-size: clamp(1.4rem, 4vw, 2rem);
-            font-weight: 500;
-        }
+      body.light-mode .theme-toggle:hover {
+         border-color: var(--light-accent);
+         color: var(--light-accent);
+      }
 
-        body.dark-mode .hero h2 {
-            color: #7aa2f7;
-        }
-        body.light-mode .hero h2 {
-            color: #4f46e5;
-        }
+      .container {
+         max-width: 1100px;
+         margin: 0 auto;
+         padding: 60px 24px;
+      }
 
-        .hero .location {
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 1.1rem;
-        }
+      /* Герой */
+      .hero {
+         display: flex;
+         align-items: center;
+         min-height: 90vh;
+         padding-top: 60px;
+      }
 
-        body.dark-mode .hero .location {
-            color: #9aa5b6;
-        }
-        body.light-mode .hero .location {
-            color: #6b7280;
-        }
+      .hero-content {
+         display: flex;
+         flex-direction: column;
+         gap: 20px;
+      }
 
-        .hero p {
-            max-width: 650px;
-            font-size: 1.1rem;
-        }
+      .hero-header {
+         display: flex;
+         align-items: center;
+         gap: 24px;
+         flex-wrap: wrap;
+      }
 
-        .btn-group {
-            display: flex;
-            gap: 14px;
-            flex-wrap: wrap;
-            margin-top: 12px;
-        }
+      .avatar {
+         width: 100px;
+         height: 100px;
+         border-radius: 28px;
+         background: linear-gradient(145deg, #7aa2f7, #bb9af7);
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         font-size: 42px;
+         font-weight: 700;
+         color: #fff;
+         flex-shrink: 0;
+         box-shadow: 0 10px 25px rgba(122, 162, 247, 0.3);
+      }
 
-        .btn {
-            padding: 12px 28px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            text-decoration: none;
-            transition: all 0.25s;
-            display: inline-block;
-            border: none;
-            cursor: pointer;
-            font-family: inherit;
-        }
+      body.light-mode .avatar {
+         background: linear-gradient(145deg, #4f46e5, #7c3aed);
+         box-shadow: 0 10px 25px rgba(79, 70, 229, 0.3);
+      }
 
-        .btn-primary {
-            background: #7aa2f7;
-            color: #0b0f17;
-            box-shadow: 0 4px 14px rgba(122, 162, 247, 0.3);
-        }
-        .btn-primary:hover {
-            background: #89b4ff;
-            transform: translateY(-2px);
-        }
+      .greeting {
+         font-family: 'Fira Code', monospace;
+      }
 
-        .btn-outline {
-            border: 1px solid;
-        }
-        body.dark-mode .btn-outline {
-            border-color: #30363d;
-            color: #c9d1d9;
-            background: transparent;
-        }
-        body.dark-mode .btn-outline:hover {
-            border-color: #7aa2f7;
-            color: #7aa2f7;
-        }
-        body.light-mode .btn-outline {
-            border-color: #ccc;
-            color: #333;
-            background: #fff;
-        }
-        body.light-mode .btn-outline:hover {
-            border-color: var(--light-accent);
-            color: var(--light-accent);
-        }
+      body.dark-mode .greeting {
+         color: var(--dark-accent);
+      }
 
-        /* Заголовки секций */
-        .section-title {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 40px;
-            display: inline-block;
-            position: relative;
-        }
+      body.light-mode .greeting {
+         color: var(--light-accent);
+      }
 
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            width: 50px;
-            height: 3px;
-            border-radius: 3px;
-        }
+      .hero h1 {
+         font-size: clamp(2.8rem, 7vw, 4.8rem);
+         font-weight: 700;
+         letter-spacing: -1.8px;
+         line-height: 1.1;
+      }
 
-        body.dark-mode .section-title::after {
-            background: #7aa2f7;
-        }
-        body.light-mode .section-title::after {
-            background: #4f46e5;
-        }
+      body.dark-mode .hero h1 {
+         background: linear-gradient(to right, #e6edf3, #9aa5b6);
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+         background-clip: text;
+      }
 
-        /* Сетки */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: start;
-        }
+      body.light-mode .hero h1 {
+         background: linear-gradient(to right, #4f46e5, #7c3aed);
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+         background-clip: text;
+      }
 
-        .card {
-            border-radius: 18px;
-            padding: 28px;
-            border: 1px solid;
-        }
+      .hero h2 {
+         font-size: clamp(1.4rem, 4vw, 2rem);
+         font-weight: 500;
+      }
 
-        body.dark-mode .card {
-            background: #131a26;
-            border-color: rgba(255, 255, 255, 0.05);
-        }
-        body.light-mode .card {
-            background: #fff;
-            border-color: #e5e7eb;
-            box-shadow: var(--light-shadow);
-        }
+      body.dark-mode .hero h2 {
+         color: #7aa2f7;
+      }
 
-        /* Категории навыков */
-        .skill-category {
-            margin-bottom: 36px;
-        }
+      body.light-mode .hero h2 {
+         color: #4f46e5;
+      }
 
-        .skill-category h3 {
-            font-size: 1.15rem;
-            font-weight: 650;
-            margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
+      .hero .location {
+         font-weight: 500;
+         display: flex;
+         align-items: center;
+         gap: 6px;
+         font-size: 1.1rem;
+      }
 
-        body.dark-mode .skill-category h3 {
-            color: #e6edf3;
-        }
-        body.light-mode .skill-category h3 {
-            color: #1f2937;
-        }
+      body.dark-mode .hero .location {
+         color: #9aa5b6;
+      }
 
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      body.light-mode .hero .location {
+         color: #6b7280;
+      }
+
+      .hero p {
+         max-width: 650px;
+         font-size: 1.1rem;
+      }
+
+      .btn-group {
+         display: flex;
+         gap: 14px;
+         flex-wrap: wrap;
+         margin-top: 12px;
+      }
+
+      .btn {
+         padding: 12px 28px;
+         border-radius: 8px;
+         font-weight: 600;
+         font-size: 0.95rem;
+         text-decoration: none;
+         transition: all 0.25s;
+         display: inline-block;
+         border: none;
+         cursor: pointer;
+         font-family: inherit;
+      }
+
+      .btn-primary {
+         background: #7aa2f7;
+         color: #0b0f17;
+         box-shadow: 0 4px 14px rgba(122, 162, 247, 0.3);
+      }
+
+      .btn-primary:hover {
+         background: #89b4ff;
+         transform: translateY(-2px);
+      }
+
+      .btn-outline {
+         border: 1px solid;
+      }
+
+      body.dark-mode .btn-outline {
+         border-color: #30363d;
+         color: #c9d1d9;
+         background: transparent;
+      }
+
+      body.dark-mode .btn-outline:hover {
+         border-color: #7aa2f7;
+         color: #7aa2f7;
+      }
+
+      body.light-mode .btn-outline {
+         border-color: #ccc;
+         color: #333;
+         background: #fff;
+      }
+
+      body.light-mode .btn-outline:hover {
+         border-color: var(--light-accent);
+         color: var(--light-accent);
+      }
+
+      /* Заголовки секций */
+      .section-title {
+         font-size: 2rem;
+         font-weight: 700;
+         margin-bottom: 40px;
+         display: inline-block;
+         position: relative;
+      }
+
+      .section-title::after {
+         content: '';
+         position: absolute;
+         bottom: -8px;
+         left: 0;
+         width: 50px;
+         height: 3px;
+         border-radius: 3px;
+      }
+
+      body.dark-mode .section-title::after {
+         background: #7aa2f7;
+      }
+
+      body.light-mode .section-title::after {
+         background: #4f46e5;
+      }
+
+      /* Сетки */
+      .about-grid {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         gap: 40px;
+         align-items: start;
+      }
+
+      .card {
+         border-radius: 18px;
+         padding: 28px;
+         border: 1px solid;
+      }
+
+      body.dark-mode .card {
+         background: #131a26;
+         border-color: rgba(255, 255, 255, 0.05);
+      }
+
+      body.light-mode .card {
+         background: #fff;
+         border-color: #e5e7eb;
+         box-shadow: var(--light-shadow);
+      }
+
+      /* Категории навыков */
+      .skill-category {
+         margin-bottom: 36px;
+      }
+
+      .skill-category h3 {
+         font-size: 1.15rem;
+         font-weight: 650;
+         margin-bottom: 16px;
+         display: flex;
+         align-items: center;
+         gap: 8px;
+      }
+
+      body.dark-mode .skill-category h3 {
+         color: #e6edf3;
+      }
+
+      body.light-mode .skill-category h3 {
+         color: #1f2937;
+      }
+
+      .skills-grid {
+         display: grid;
+         grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+         gap: 10px;
+      }
+
+      .skill-item {
+         border-radius: 12px;
+         padding: 12px 14px;
+         text-align: center;
+         font-weight: 600;
+         font-size: 0.85rem;
+         transition: all 0.2s;
+         border: 1px solid transparent;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         gap: 6px;
+      }
+
+      body.dark-mode .skill-item {
+         background: #131a26;
+         border-color: rgba(255, 255, 255, 0.04);
+      }
+
+      body.dark-mode .skill-item:hover {
+         border-color: #7aa2f7;
+         transform: translateY(-3px);
+      }
+
+      body.light-mode .skill-item {
+         background: #fff;
+         border-color: #e5e7eb;
+      }
+
+      body.light-mode .skill-item:hover {
+         border-color: #4f46e5;
+         transform: translateY(-3px);
+      }
+
+      /* Языки */
+      .lang-grid {
+         display: grid;
+         grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+         gap: 10px;
+      }
+
+      .lang-item {
+         border-radius: 12px;
+         padding: 12px;
+         text-align: center;
+         font-weight: 600;
+         font-size: 0.85rem;
+         transition: all 0.2s;
+         border: 1px solid transparent;
+      }
+
+      body.dark-mode .lang-item {
+         background: #131a26;
+         border-color: rgba(255, 255, 255, 0.04);
+      }
+
+      body.dark-mode .lang-item:hover {
+         border-color: #bb9af7;
+         transform: translateY(-2px);
+      }
+
+      body.light-mode .lang-item {
+         background: #fff;
+         border-color: #e5e7eb;
+      }
+
+      body.light-mode .lang-item:hover {
+         border-color: #7c3aed;
+         transform: translateY(-2px);
+      }
+
+      /* Проекты */
+      .projects-grid {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+         gap: 24px;
+      }
+
+      .project-card {
+         border-radius: 18px;
+         padding: 26px;
+         border: 1px solid;
+         display: flex;
+         flex-direction: column;
+         transition: all 0.3s;
+      }
+
+      body.dark-mode .project-card {
+         background: #131a26;
+         border-color: rgba(255, 255, 255, 0.05);
+      }
+
+      body.light-mode .project-card {
+         background: #fff;
+         border-color: #e5e7eb;
+      }
+
+      .project-card:hover {
+         transform: translateY(-4px);
+      }
+
+      .tech-tag {
+         display: inline-block;
+         padding: 4px 10px;
+         border-radius: 20px;
+         font-size: 0.75rem;
+         font-weight: 600;
+         margin: 2px;
+      }
+
+      body.dark-mode .tech-tag {
+         background: rgba(122, 162, 247, 0.12);
+         color: #7aa2f7;
+      }
+
+      body.light-mode .tech-tag {
+         background: #e0e7ff;
+         color: #4f46e5;
+      }
+
+      /* Таблица */
+      .price-table {
+         width: 100%;
+         border-collapse: collapse;
+         font-size: 0.9rem;
+         margin: 20px 0;
+      }
+
+      .price-table th,
+      .price-table td {
+         padding: 12px 14px;
+         border-bottom: 1px solid;
+         text-align: left;
+      }
+
+      body.dark-mode .price-table th,
+      body.dark-mode .price-table td {
+         border-color: #1f2937;
+      }
+
+      body.light-mode .price-table th,
+      body.light-mode .price-table td {
+         border-color: #e5e7eb;
+      }
+
+      .price-table th {
+         font-weight: 650;
+         font-size: 0.8rem;
+         text-transform: uppercase;
+         letter-spacing: 0.5px;
+      }
+
+      body.dark-mode .price-table th {
+         color: #9aa5b6;
+      }
+
+      body.light-mode .price-table th {
+         color: #6b7280;
+      }
+
+      /* Подвал */
+      .footer {
+         text-align: center;
+         padding: 24px 0;
+         font-size: 0.85rem;
+         border-top: 1px solid;
+         margin-top: 40px;
+      }
+
+      body.dark-mode .footer {
+         border-color: rgba(255, 255, 255, 0.05);
+         color: #484f5a;
+      }
+
+      body.light-mode .footer {
+         border-color: #e5e7eb;
+         color: #6b7280;
+      }
+
+      .contact-links {
+         display: flex;
+         gap: 20px;
+         flex-wrap: wrap;
+      }
+
+      .contact-links a {
+         text-decoration: none;
+         font-weight: 600;
+         transition: 0.2s;
+      }
+
+      body.dark-mode .contact-links a {
+         color: #9aa5b6;
+      }
+
+      body.dark-mode .contact-links a:hover {
+         color: #7aa2f7;
+      }
+
+      body.light-mode .contact-links a {
+         color: #555;
+      }
+
+      body.light-mode .contact-links a:hover {
+         color: #4f46e5;
+      }
+
+      .project-link {
+         margin-top: 12px;
+         display: inline-flex;
+         align-items: center;
+         gap: 6px;
+         text-decoration: none;
+         font-weight: 500;
+         font-size: 0.9rem;
+         transition: color 0.2s;
+         color: #7aa2f7;
+      }
+
+      .project-link:hover {
+         text-decoration: underline;
+      }
+
+      @media (max-width: 700px) {
+         .about-grid {
+            grid-template-columns: 1fr;
+         }
+
+         .nav-links {
             gap: 10px;
-        }
-
-        .skill-item {
-            border-radius: 12px;
-            padding: 12px 14px;
-            text-align: center;
-            font-weight: 600;
-            font-size: 0.85rem;
-            transition: all 0.2s;
-            border: 1px solid transparent;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-        }
-
-        body.dark-mode .skill-item {
-            background: #131a26;
-            border-color: rgba(255, 255, 255, 0.04);
-        }
-        body.dark-mode .skill-item:hover {
-            border-color: #7aa2f7;
-            transform: translateY(-3px);
-        }
-        body.light-mode .skill-item {
-            background: #fff;
-            border-color: #e5e7eb;
-        }
-        body.light-mode .skill-item:hover {
-            border-color: #4f46e5;
-            transform: translateY(-3px);
-        }
-
-        /* Языки */
-        .lang-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
-            gap: 10px;
-        }
-
-        .lang-item {
-            border-radius: 12px;
-            padding: 12px;
-            text-align: center;
-            font-weight: 600;
-            font-size: 0.85rem;
-            transition: all 0.2s;
-            border: 1px solid transparent;
-        }
-
-        body.dark-mode .lang-item {
-            background: #131a26;
-            border-color: rgba(255, 255, 255, 0.04);
-        }
-        body.dark-mode .lang-item:hover {
-            border-color: #bb9af7;
-            transform: translateY(-2px);
-        }
-        body.light-mode .lang-item {
-            background: #fff;
-            border-color: #e5e7eb;
-        }
-        body.light-mode .lang-item:hover {
-            border-color: #7c3aed;
-            transform: translateY(-2px);
-        }
-
-        /* Проекты */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 24px;
-        }
-
-        .project-card {
-            border-radius: 18px;
-            padding: 26px;
-            border: 1px solid;
-            display: flex;
-            flex-direction: column;
-            transition: all 0.3s;
-        }
-
-        body.dark-mode .project-card {
-            background: #131a26;
-            border-color: rgba(255, 255, 255, 0.05);
-        }
-        body.light-mode .project-card {
-            background: #fff;
-            border-color: #e5e7eb;
-        }
-        .project-card:hover {
-            transform: translateY(-4px);
-        }
-
-        .tech-tag {
-            display: inline-block;
-            padding: 4px 10px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            margin: 2px;
-        }
-
-        body.dark-mode .tech-tag {
-            background: rgba(122, 162, 247, 0.12);
-            color: #7aa2f7;
-        }
-        body.light-mode .tech-tag {
-            background: #e0e7ff;
-            color: #4f46e5;
-        }
-
-        /* Таблица */
-        .price-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 0.9rem;
-            margin: 20px 0;
-        }
-
-        .price-table th,
-        .price-table td {
-            padding: 12px 14px;
-            border-bottom: 1px solid;
-            text-align: left;
-        }
-
-        body.dark-mode .price-table th,
-        body.dark-mode .price-table td {
-            border-color: #1f2937;
-        }
-        body.light-mode .price-table th,
-        body.light-mode .price-table td {
-            border-color: #e5e7eb;
-        }
-
-        .price-table th {
-            font-weight: 650;
             font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
+         }
 
-        body.dark-mode .price-table th {
-            color: #9aa5b6;
-        }
-        body.light-mode .price-table th {
-            color: #6b7280;
-        }
-
-        /* Подвал */
-        .footer {
-            text-align: center;
-            padding: 24px 0;
-            font-size: 0.85rem;
-            border-top: 1px solid;
-            margin-top: 40px;
-        }
-
-        body.dark-mode .footer {
-            border-color: rgba(255, 255, 255, 0.05);
-            color: #484f5a;
-        }
-        body.light-mode .footer {
-            border-color: #e5e7eb;
-            color: #6b7280;
-        }
-
-        .contact-links {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .contact-links a {
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.2s;
-        }
-
-        body.dark-mode .contact-links a {
-            color: #9aa5b6;
-        }
-        body.dark-mode .contact-links a:hover {
-            color: #7aa2f7;
-        }
-        body.light-mode .contact-links a {
-            color: #555;
-        }
-        body.light-mode .contact-links a:hover {
-            color: #4f46e5;
-        }
-
-        .project-link {
-            margin-top: 12px;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9rem;
-            transition: color 0.2s;
-            color: #7aa2f7;
-        }
-
-        .project-link:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 700px) {
-            .about-grid {
-                grid-template-columns: 1fr;
-            }
-            .nav-links {
-                gap: 10px;
-                font-size: 0.8rem;
-            }
-            .hero-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        }
-    </style>
+         .hero-header {
+            flex-direction: column;
+            align-items: flex-start;
+         }
+      }
+   </style>
 </head>
 
 <body class="dark-mode">
-    <nav class="navbar">
-        <div class="nav-container">
-            <span class="logo">Рустам Кафеев</span>
-            <ul class="nav-links">
-                <li><a href="#about">Обо мне</a></li>
-                <li><a href="#languages">Языки</a></li>
-                <li><a href="#skills">Навыки</a></li>
-                <li><a href="#projects">Проекты</a></li>
-                <li><a href="#pricing">Расценки</a></li>
-                <li><a href="#contact">Контакты</a></li>
-            </ul>
-            <button class="theme-toggle" onclick="toggleTheme()">🌓 Тема</button>
-        </div>
-    </nav>
+   <nav class="navbar" aria-label="Основная навигация">
+      <div class="nav-container">
+         <span class="logo">Рустам Кафеев</span>
+         <ul class="nav-links">
+            <li><a href="#about">Обо мне</a></li>
+            <li><a href="#languages">Языки</a></li>
+            <li><a href="#skills">Навыки</a></li>
+            <li><a href="#projects">Проекты</a></li>
+            <li><a href="#pricing">Расценки</a></li>
+            <li><a href="#contact">Контакты</a></li>
+         </ul>
+         <button class="theme-toggle" onclick="toggleTheme()" aria-label="Переключить тему">🌓 Тема</button>
+      </div>
+   </nav>
 
-    <main>
-        <!-- Герой -->
-        <section class="hero">
-            <div class="container hero-content">
-                <div class="hero-header">
-                    <div class="avatar">РК</div>
-                    <div>
-                        <span class="greeting">👋 Привет, я</span>
-                        <h1>Рустам Кафеев</h1>
-                    </div>
-                </div>
-                <h2>Fullstack-разработчик</h2>
-                <div class="location">📍 Челябинск / Удалённо по РФ</div>
-                <p>
-                    Разрабатываю веб-приложения полного цикла: от архитектуры базы данных до анимации кнопок.
-                    Владею широким стеком — Python, JavaScript, TypeScript, Go.
-                    Создаю REST API, микросервисы, SPA и автоматизирую деплой.
-                    Живу в Челябинске, работаю с командами по всей России.
-                </p>
-                <div class="btn-group">
-                    <a href="#projects" class="btn btn-primary">Мои проекты</a>
-                    <a href="https://github.com/Rustam-Kafeev" target="_blank" rel="noopener" class="btn btn-outline">🐙 GitHub</a>
-                    <a href="#contact" class="btn btn-outline">📬 Контакты</a>
-                </div>
+   <main>
+      <!-- Герой -->
+      <section class="hero" aria-label="Приветствие и основная информация">
+         <div class="container hero-content">
+            <div class="hero-header">
+               <div class="avatar" role="img" aria-label="Инициалы Рустам Кафеев">РК</div>
+               <div>
+                  <span class="greeting">👋 Привет, я</span>
+                  <h1>Рустам Кафеев</h1>
+               </div>
             </div>
-        </section>
-
-        <!-- Обо мне -->
-        <section id="about">
-            <div class="container">
-                <h2 class="section-title">Обо мне</h2>
-                <div class="about-grid">
-                    <div>
-                        <p style="margin-bottom: 14px;">
-                            Я <strong>Рустам Кафеев</strong> — fullstack-разработчик из <strong>Челябинска</strong>.
-                            Прошёл путь от верстальщика до инженера, который может в одиночку поднять проект
-                            от идеи до продакшна. Пишу на Python, TypeScript и Go.
-                        </p>
-                        <p style="margin-bottom: 14px;">
-                            Работаю с реляционными и нереляционными базами данных,
-                            проектирую REST API и GraphQL, настраиваю CI/CD,
-                            контейнеризирую приложения. Уверенно владею Linux.
-                        </p>
-                        <p>
-                            Открыт к интересным проектам и постоянному росту.
-                            Готов рассмотреть офферы от челябинских IT-компаний и удалённую работу по РФ и миру.
-                        </p>
-                    </div>
-                    <div class="card">
-                        <p style="margin-bottom: 8px;"><strong>📍 Город:</strong> Челябинск</p>
-                        <p style="margin-bottom: 8px;"><strong>🎯 Профиль:</strong> Fullstack-разработчик</p>
-                        <p style="margin-bottom: 8px;"><strong>📘 GitHub:</strong> Rustam-Kafeev</p>
-                        <p style="margin-bottom: 8px;"><strong>🕒 Опыт:</strong> 4+ года коммерческой разработки</p>
-                        <p style="margin-bottom: 8px;"><strong>🌍 Работаю:</strong> Челябинск + вся РФ</p>
-                        <p><strong>⚡ Статус:</strong> Открыт к заказам и офферам</p>
-                    </div>
-                </div>
+            <h2>Fullstack-разработчик</h2>
+            <div class="location">📍 Челябинск / Удалённо по РФ</div>
+            <p>
+               Разрабатываю веб-приложения полного цикла: от архитектуры базы данных до анимации кнопок.
+               Владею широким стеком — <strong>Python</strong>, <strong>JavaScript</strong>,
+               <strong>TypeScript</strong>, <strong>Go</strong>.
+               Создаю REST API, микросервисы, SPA и автоматизирую деплой.
+               Живу в <strong>Челябинске</strong>, работаю с командами по всей России.
+            </p>
+            <div class="btn-group">
+               <a href="#projects" class="btn btn-primary">Мои проекты</a>
+               <a href="https://github.com/Rustam-Kafeev" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-outline">🐙 GitHub</a>
+               <a href="#contact" class="btn btn-outline">📬 Контакты</a>
             </div>
-        </section>
+         </div>
+      </section>
 
-        <!-- Языки программирования -->
-        <section id="languages">
-            <div class="container">
-                <h2 class="section-title">Языки программирования</h2>
-                <div class="lang-grid">
-                    <div class="lang-item">🐍 Python</div>
-                    <div class="lang-item">🟨 JavaScript</div>
-                    <div class="lang-item">🟦 TypeScript</div>
-                    <div class="lang-item">🐹 Go</div>
-                    <div class="lang-item">☕ Java</div>
-                    <div class="lang-item">🟪 C#</div>
-                    <div class="lang-item">⚡ C / C++</div>
-                    <div class="lang-item">🦀 Rust</div>
-                    <div class="lang-item">💎 Ruby</div>
-                    <div class="lang-item">🐘 PHP</div>
-                    <div class="lang-item">🔷 Swift</div>
-                    <div class="lang-item">🟢 Kotlin</div>
-                    <div class="lang-item">🗄️ SQL</div>
-                    <div class="lang-item">🔧 Bash</div>
-                    <div class="lang-item">📊 R</div>
-                    <div class="lang-item">🔴 Scala</div>
-                    <div class="lang-item">🌙 Lua</div>
-                    <div class="lang-item">🎯 Dart</div>
-                    <div class="lang-item">📝 HTML</div>
-                    <div class="lang-item">🎨 CSS</div>
-                </div>
+      <!-- Обо мне -->
+      <section id="about" aria-label="Подробная информация обо мне">
+         <div class="container">
+            <h2 class="section-title">Обо мне</h2>
+            <div class="about-grid">
+               <div>
+                  <p style="margin-bottom: 14px;">
+                     Я <strong>Рустам Кафеев</strong> — <strong>fullstack-разработчик из Челябинска</strong>.
+                     Прошёл путь от верстальщика до инженера, который может в одиночку поднять проект
+                     от идеи до продакшна. Пишу на <strong>Python</strong>, <strong>TypeScript</strong> и
+                     <strong>Go</strong>.
+                  </p>
+                  <p style="margin-bottom: 14px;">
+                     Работаю с реляционными и нереляционными базами данных,
+                     проектирую <strong>REST API</strong> и <strong>GraphQL</strong>, настраиваю <strong>CI/CD</strong>,
+                     контейнеризирую приложения. Уверенно владею <strong>Linux</strong>.
+                  </p>
+                  <p>
+                     Открыт к интересным проектам и постоянному росту.
+                     Готов рассмотреть офферы от челябинских IT-компаний и удалённую работу по РФ и миру.
+                  </p>
+               </div>
+               <div class="card">
+                  <p style="margin-bottom: 8px;"><strong>📍 Город:</strong> Челябинск</p>
+                  <p style="margin-bottom: 8px;"><strong>🎯 Профиль:</strong> Fullstack-разработчик</p>
+                  <p style="margin-bottom: 8px;"><strong>📘 GitHub:</strong> <a href="https://github.com/Rustam-Kafeev"
+                        target="_blank" rel="noopener noreferrer">Rustam-Kafeev</a></p>
+                  <p style="margin-bottom: 8px;"><strong>🕒 Опыт:</strong> 16+ лет коммерческой разработки</p>
+                  <p style="margin-bottom: 8px;"><strong>🌍 Работаю:</strong> Челябинск + вся РФ</p>
+                  <p><strong>⚡ Статус:</strong> Открыт к заказам и офферам</p>
+               </div>
             </div>
-        </section>
+         </div>
+      </section>
 
-        <!-- Навыки -->
-        <section id="skills">
-            <div class="container">
-                <h2 class="section-title">Профессиональные навыки</h2>
-
-                <!-- Frontend -->
-                <div class="skill-category">
-                    <h3>🎨 Frontend</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">⚛️ React</div>
-                        <div class="skill-item">🟦 Next.js</div>
-                        <div class="skill-item">💚 Vue.js</div>
-                        <div class="skill-item">🅰️ Angular</div>
-                        <div class="skill-item">🔄 Redux</div>
-                        <div class="skill-item">📝 TypeScript</div>
-                        <div class="skill-item">🎨 Tailwind CSS</div>
-                        <div class="skill-item">🖌️ SCSS / SASS</div>
-                        <div class="skill-item">🧩 Webpack / Vite</div>
-                        <div class="skill-item">📱 PWA</div>
-                    </div>
-                </div>
-
-                <!-- Backend -->
-                <div class="skill-category">
-                    <h3>⚙️ Backend</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">🐍 Django</div>
-                        <div class="skill-item">🍶 Flask</div>
-                        <div class="skill-item">⚡ FastAPI</div>
-                        <div class="skill-item">🟢 Node.js</div>
-                        <div class="skill-item">🚂 Express</div>
-                        <div class="skill-item">🔗 REST API</div>
-                        <div class="skill-item">◈ GraphQL</div>
-                        <div class="skill-item">🔐 JWT / OAuth</div>
-                        <div class="skill-item">📬 WebSocket</div>
-                        <div class="skill-item">🧵 Celery / Redis</div>
-                    </div>
-                </div>
-
-                <!-- Базы данных -->
-                <div class="skill-category">
-                    <h3>🗄️ Базы данных</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">🐘 PostgreSQL</div>
-                        <div class="skill-item">🌿 MongoDB</div>
-                        <div class="skill-item">🔴 Redis</div>
-                        <div class="skill-item">🐬 MySQL</div>
-                        <div class="skill-item">⚡ SQLite</div>
-                        <div class="skill-item">🔍 Elasticsearch</div>
-                        <div class="skill-item">🔷 Prisma ORM</div>
-                        <div class="skill-item">🟩 SQLAlchemy</div>
-                    </div>
-                </div>
-
-                <!-- DevOps & Tools -->
-                <div class="skill-category">
-                    <h3>🚀 DevOps & Инструменты</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">🐳 Docker</div>
-                        <div class="skill-item">☸️ Kubernetes</div>
-                        <div class="skill-item">🔧 Git</div>
-                        <div class="skill-item">🔄 CI/CD</div>
-                        <div class="skill-item">☁️ AWS</div>
-                        <div class="skill-item">🟦 Azure</div>
-                        <div class="skill-item">🐧 Linux</div>
-                        <div class="skill-item">📊 Nginx</div>
-                        <div class="skill-item">🧪 Jest / Pytest</div>
-                        <div class="skill-item">📈 Prometheus</div>
-                    </div>
-                </div>
-
-                <!-- ML / AI -->
-                <div class="skill-category">
-                    <h3>🤖 ML / AI</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">🧠 TensorFlow</div>
-                        <div class="skill-item">🔥 PyTorch</div>
-                        <div class="skill-item">📊 Pandas</div>
-                        <div class="skill-item">🔢 NumPy</div>
-                        <div class="skill-item">📈 Scikit-learn</div>
-                        <div class="skill-item">💬 NLP</div>
-                        <div class="skill-item">👁️ Computer Vision</div>
-                        <div class="skill-item">🤗 Hugging Face</div>
-                    </div>
-                </div>
+      <!-- Языки программирования -->
+      <section id="languages" aria-label="Языки программирования, которыми я владею">
+         <div class="container">
+            <h2 class="section-title">Языки программирования</h2>
+            <div class="lang-grid">
+               <div class="lang-item">🐍 Python</div>
+               <div class="lang-item">🟨 JavaScript</div>
+               <div class="lang-item">🟦 TypeScript</div>
+               <div class="lang-item">🐹 Go</div>
+               <div class="lang-item">☕ Java</div>
+               <div class="lang-item">🟪 C#</div>
+               <div class="lang-item">⚡ C / C++</div>
+               <div class="lang-item">🦀 Rust</div>
+               <div class="lang-item">💎 Ruby</div>
+               <div class="lang-item">🐘 PHP</div>
+               <div class="lang-item">🔷 Swift</div>
+               <div class="lang-item">🟢 Kotlin</div>
+               <div class="lang-item">🗄️ SQL</div>
+               <div class="lang-item">🔧 Bash</div>
+               <div class="lang-item">📊 R</div>
+               <div class="lang-item">🔴 Scala</div>
+               <div class="lang-item">🌙 Lua</div>
+               <div class="lang-item">🎯 Dart</div>
+               <div class="lang-item">📝 HTML</div>
+               <div class="lang-item">🎨 CSS</div>
             </div>
-        </section>
+         </div>
+      </section>
 
-        <!-- Проекты -->
-        <section id="projects">
-            <div class="container">
-                <h2 class="section-title">Проекты с GitHub</h2>
-                <p style="margin-bottom: 24px; opacity: 0.8;">
-                    ⚠️ Ссылки ведут на мой GitHub. Если репозитории были переименованы — вы всегда можете найти актуальный код в 
-                    <a href="https://github.com/Rustam-Kafeev?tab=repositories" target="_blank" rel="noopener" style="color: #7aa2f7;">списке всех репозиториев</a>.
-                </p>
-                <div class="projects-grid">
-                    <!-- Проект 1: YaCut -->
-                    <div class="project-card">
-                        <h3 style="margin-bottom: 10px;">✂️ YaCut</h3>
-                        <p style="margin-bottom: 14px; font-size: 0.9rem;">Fullstack-сервис сокращения ссылок. Бэкенд на Flask + SQLAlchemy, фронтенд на Bootstrap. Реализован REST API, валидация данных и кастомные alias.</p>
-                        <div>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Flask</span>
-                            <span class="tech-tag">SQLAlchemy</span>
-                            <span class="tech-tag">REST API</span>
-                        </div>
-                        <a href="https://github.com/Rustam-Kafeev/YaCut" target="_blank" rel="noopener" class="project-link">📁 Смотреть в GitHub</a>
-                    </div>
-                    <!-- Проект 2: TaskTracker -->
-                    <div class="project-card">
-                        <h3 style="margin-bottom: 10px;">✅ TaskTracker</h3>
-                        <p style="margin-bottom: 14px; font-size: 0.9rem;">Планировщик задач на Django с REST API. Реализованы CRUD-операции, фильтрация, статусы задач и пагинация.</p>
-                        <div>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Django</span>
-                            <span class="tech-tag">SQLite</span>
-                            <span class="tech-tag">Bootstrap</span>
-                        </div>
-                        <a href="https://github.com/Rustam-Kafeev/TaskTracker" target="_blank" rel="noopener" class="project-link">📁 Смотреть в GitHub</a>
-                    </div>
-                    <!-- Проект 3: yandex-browser -->
-                    <div class="project-card">
-                        <h3 style="margin-bottom: 10px;">🌐 yandex-browser</h3>
-                        <p style="margin-bottom: 14px; font-size: 0.9rem;">Инструмент для парсинга и автоматизации на Selenium + BeautifulSoup. Обход динамических страниц и сбор данных.</p>
-                        <div>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Selenium</span>
-                            <span class="tech-tag">BeautifulSoup</span>
-                            <span class="tech-tag">Парсинг</span>
-                        </div>
-                        <a href="https://github.com/Rustam-Kafeev/yandex-browser" target="_blank" rel="noopener" class="project-link">📁 Смотреть в GitHub</a>
-                    </div>
-                </div>
-                <!-- Блок с информацией о ссылках -->
-                <div class="card" style="margin-top: 28px; background: rgba(122, 162, 247, 0.05); border-color: rgba(122, 162, 247, 0.2);">
-                    <p style="margin-bottom: 8px;">
-                        💡 <strong>Примечание:</strong> Все проекты доступны в моём 
-                        <a href="https://github.com/Rustam-Kafeev?tab=repositories" target="_blank" rel="noopener" style="color: #7aa2f7;">GitHub-профиле</a>.
-                        Если какая-то ссылка не работает — репозиторий мог быть переименован.
-                        Напишите мне в <strong>Telegram: @KafRus74</strong>, и я подскажу актуальное название.
-                    </p>
-                </div>
+      <!-- Навыки -->
+      <section id="skills" aria-label="Профессиональные навыки">
+         <div class="container">
+            <h2 class="section-title">Профессиональные навыки</h2>
+
+            <!-- Frontend -->
+            <div class="skill-category">
+               <h3>🎨 Frontend</h3>
+               <div class="skills-grid">
+                  <div class="skill-item">⚛️ React</div>
+                  <div class="skill-item">🟦 Next.js</div>
+                  <div class="skill-item">💚 Vue.js</div>
+                  <div class="skill-item">🅰️ Angular</div>
+                  <div class="skill-item">🔄 Redux</div>
+                  <div class="skill-item">📝 TypeScript</div>
+                  <div class="skill-item">🎨 Tailwind CSS</div>
+                  <div class="skill-item">🖌️ SCSS / SASS</div>
+                  <div class="skill-item">🧩 Webpack / Vite</div>
+                  <div class="skill-item">📱 PWA</div>
+               </div>
             </div>
-        </section>
 
-        <!-- Расценки -->
-        <section id="pricing">
-            <div class="container">
-                <h2 class="section-title">Ориентировочные расценки</h2>
-                <p style="margin-bottom: 20px; opacity: 0.8;">Рыночные ставки на разработку (в рублях). Итоговая цена зависит от сложности и объёма проекта.</p>
-                <table class="price-table">
-                    <thead>
-                        <tr><th>Услуга</th><th>₽ / час</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Лендинг / Сайт-визитка</td><td>1 500 – 3 500</td></tr>
-                        <tr><td>Корпоративный сайт</td><td>2 000 – 5 000</td></tr>
-                        <tr><td>Интернет-магазин</td><td>2 500 – 6 000</td></tr>
-                        <tr><td>Веб-приложение (Fullstack)</td><td>3 000 – 7 000</td></tr>
-                        <tr><td>REST API / Бэкенд</td><td>3 000 – 7 500</td></tr>
-                        <tr><td>Мобильное приложение</td><td>3 500 – 8 000</td></tr>
-                        <tr><td>AI / ML интеграция</td><td>4 000 – 10 000</td></tr>
-                        <tr><td>Парсинг / Автоматизация</td><td>2 000 – 5 500</td></tr>
-                        <tr><td>DevOps / Настройка сервера</td><td>2 500 – 6 000</td></tr>
-                        <tr><td>Консультация / Code Review</td><td>1 500 – 4 000</td></tr>
-                    </tbody>
-                </table>
-                <div class="card" style="margin-top: 20px;">
-                    💡 <strong>Внимание:</strong> Все цифры ориентировочные. Точная стоимость обсуждается после брифинга и оценки объёма проекта.
-                </div>
+            <!-- Backend -->
+            <div class="skill-category">
+               <h3>⚙️ Backend</h3>
+               <div class="skills-grid">
+                  <div class="skill-item">🐍 Django</div>
+                  <div class="skill-item">🍶 Flask</div>
+                  <div class="skill-item">⚡ FastAPI</div>
+                  <div class="skill-item">🟢 Node.js</div>
+                  <div class="skill-item">🚂 Express</div>
+                  <div class="skill-item">🔗 REST API</div>
+                  <div class="skill-item">◈ GraphQL</div>
+                  <div class="skill-item">🔐 JWT / OAuth</div>
+                  <div class="skill-item">📬 WebSocket</div>
+                  <div class="skill-item">🧵 Celery / Redis</div>
+               </div>
             </div>
-        </section>
 
-        <!-- Контакты -->
-        <section id="contact">
-            <div class="container">
-                <h2 class="section-title">Контакты</h2>
-                <div class="card" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px;">
-                    <div>
-                        <p><strong>📍 Челябинск / Удалённо по РФ</strong></p>
-                        <p>✉️ krr12@mail.ru</p>
-                        <p>💬 Telegram: @KafRus74</p>
-                    </div>
-                    <div class="contact-links">
-                        <a href="https://github.com/Rustam-Kafeev" target="_blank" rel="noopener">🐙 GitHub</a>
-                        <a href="https://github.com/Rustam-Kafeev?tab=repositories" target="_blank" rel="noopener">📁 Все репозитории</a>
-                    </div>
-                </div>
+            <!-- Базы данных -->
+            <div class="skill-category">
+               <h3>🗄️ Базы данных</h3>
+               <div class="skills-grid">
+                  <div class="skill-item">🐘 PostgreSQL</div>
+                  <div class="skill-item">🌿 MongoDB</div>
+                  <div class="skill-item">🔴 Redis</div>
+                  <div class="skill-item">🐬 MySQL</div>
+                  <div class="skill-item">⚡ SQLite</div>
+                  <div class="skill-item">🔍 Elasticsearch</div>
+                  <div class="skill-item">🔷 Prisma ORM</div>
+                  <div class="skill-item">🟩 SQLAlchemy</div>
+               </div>
             </div>
-        </section>
-    </main>
 
-    <footer class="footer">
-        <div class="container">
-            © 2026 Рустам Кафеев — Fullstack-разработчик, Челябинск. Создано с вниманием к качеству кода.
-        </div>
-    </footer>
+            <!-- DevOps & Tools -->
+            <div class="skill-category">
+               <h3>🚀 DevOps & Инструменты</h3>
+               <div class="skills-grid">
+                  <div class="skill-item">🐳 Docker</div>
+                  <div class="skill-item">☸️ Kubernetes</div>
+                  <div class="skill-item">🔧 Git</div>
+                  <div class="skill-item">🔄 CI/CD</div>
+                  <div class="skill-item">☁️ AWS</div>
+                  <div class="skill-item">🟦 Azure</div>
+                  <div class="skill-item">🐧 Linux</div>
+                  <div class="skill-item">📊 Nginx</div>
+                  <div class="skill-item">🧪 Jest / Pytest</div>
+                  <div class="skill-item">📈 Prometheus</div>
+               </div>
+            </div>
 
-    <script>
-        function toggleTheme() {
-            const body = document.body;
-            if (body.classList.contains('dark-mode')) {
-                body.classList.remove('dark-mode');
-                body.classList.add('light-mode');
-            } else {
-                body.classList.remove('light-mode');
-                body.classList.add('dark-mode');
+            <!-- ML / AI -->
+            <div class="skill-category">
+               <h3>🤖 ML / AI</h3>
+               <div class="skills-grid">
+                  <div class="skill-item">🧠 TensorFlow</div>
+                  <div class="skill-item">🔥 PyTorch</div>
+                  <div class="skill-item">📊 Pandas</div>
+                  <div class="skill-item">🔢 NumPy</div>
+                  <div class="skill-item">📈 Scikit-learn</div>
+                  <div class="skill-item">💬 NLP</div>
+                  <div class="skill-item">👁️ Computer Vision</div>
+                  <div class="skill-item">🤗 Hugging Face</div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- Проекты -->
+      <section id="projects" aria-label="Мои проекты на GitHub">
+         <div class="container">
+            <h2 class="section-title">Проекты с GitHub</h2>
+            <p style="margin-bottom: 24px; opacity: 0.8;">
+               ⚠️ Ссылки ведут на мой GitHub. Если репозитории были переименованы — вы всегда можете найти актуальный
+               код в
+               <a href="https://github.com/Rustam-Kafeev?tab=repositories" target="_blank" rel="noopener noreferrer"
+                  style="color: #7aa2f7;">списке всех репозиториев</a>.
+            </p>
+            <div class="projects-grid">
+               <!-- Проект 1: YaCut -->
+               <article class="project-card">
+                  <h3 style="margin-bottom: 10px;">✂️ YaCut — Сервис сокращения ссылок</h3>
+                  <p style="margin-bottom: 14px; font-size: 0.9rem;">Fullstack-сервис сокращения ссылок. Бэкенд на Flask
+                     + SQLAlchemy, фронтенд на Bootstrap. Реализован REST API, валидация данных и кастомные alias.</p>
+                  <div>
+                     <span class="tech-tag">Python</span>
+                     <span class="tech-tag">Flask</span>
+                     <span class="tech-tag">SQLAlchemy</span>
+                     <span class="tech-tag">REST API</span>
+                  </div>
+                  <a href="https://github.com/Rustam-Kafeev/YaCut" target="_blank" rel="noopener noreferrer"
+                     class="project-link">📁 Смотреть в GitHub</a>
+               </article>
+               <!-- Проект 2: TaskTracker -->
+               <article class="project-card">
+                  <h3 style="margin-bottom: 10px;">✅ TaskTracker — Планировщик задач</h3>
+                  <p style="margin-bottom: 14px; font-size: 0.9rem;">Планировщик задач на Django с REST API. Реализованы
+                     CRUD-операции, фильтрация, статусы задач и пагинация.</p>
+                  <div>
+                     <span class="tech-tag">Python</span>
+                     <span class="tech-tag">Django</span>
+                     <span class="tech-tag">SQLite</span>
+                     <span class="tech-tag">Bootstrap</span>
+                  </div>
+                  <a href="https://github.com/Rustam-Kafeev/TaskTracker" target="_blank" rel="noopener noreferrer"
+                     class="project-link">📁 Смотреть в GitHub</a>
+               </article>
+               <!-- Проект 3: yandex-browser -->
+               <article class="project-card">
+                  <h3 style="margin-bottom: 10px;">🌐 yandex-browser — Инструмент парсинга</h3>
+                  <p style="margin-bottom: 14px; font-size: 0.9rem;">Инструмент для парсинга и автоматизации на Selenium
+                     + BeautifulSoup. Обход динамических страниц и сбор данных.</p>
+                  <div>
+                     <span class="tech-tag">Python</span>
+                     <span class="tech-tag">Selenium</span>
+                     <span class="tech-tag">BeautifulSoup</span>
+                     <span class="tech-tag">Парсинг</span>
+                  </div>
+                  <a href="https://github.com/Rustam-Kafeev/yandex-browser" target="_blank" rel="noopener noreferrer"
+                     class="project-link">📁 Смотреть в GitHub</a>
+               </article>
+            </div>
+            <!-- Блок с информацией о ссылках -->
+            <div class="card"
+               style="margin-top: 28px; background: rgba(122, 162, 247, 0.05); border-color: rgba(122, 162, 247, 0.2);">
+               <p style="margin-bottom: 8px;">
+                  💡 <strong>Примечание:</strong> Все проекты доступны в моём
+                  <a href="https://github.com/Rustam-Kafeev?tab=repositories" target="_blank" rel="noopener noreferrer"
+                     style="color: #7aa2f7;">GitHub-профиле</a>.
+                  Если какая-то ссылка не работает — репозиторий мог быть переименован.
+                  Напишите мне в <strong>Telegram: @KafRus74</strong>, и я подскажу актуальное название.
+               </p>
+            </div>
+         </div>
+      </section>
+
+      <!-- Расценки -->
+      <section id="pricing" aria-label="Ориентировочные расценки на услуги">
+         <div class="container">
+            <h2 class="section-title">Ориентировочные расценки</h2>
+            <p style="margin-bottom: 20px; opacity: 0.8;">Рыночные ставки на разработку (в рублях). Итоговая цена
+               зависит от сложности и объёма проекта.</p>
+            <table class="price-table">
+               <caption style="display: none;">Стоимость услуг разработки</caption>
+               <thead>
+                  <tr>
+                     <th scope="col">Услуга</th>
+                     <th scope="col">₽ / час</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td>Лендинг / Сайт-визитка</td>
+                     <td>1 500 – 3 500</td>
+                  </tr>
+                  <tr>
+                     <td>Корпоративный сайт</td>
+                     <td>2 000 – 5 000</td>
+                  </tr>
+                  <tr>
+                     <td>Интернет-магазин</td>
+                     <td>2 500 – 6 000</td>
+                  </tr>
+                  <tr>
+                     <td>Веб-приложение (Fullstack)</td>
+                     <td>3 000 – 7 000</td>
+                  </tr>
+                  <tr>
+                     <td>REST API / Бэкенд</td>
+                     <td>3 000 – 7 500</td>
+                  </tr>
+                  <tr>
+                     <td>Мобильное приложение</td>
+                     <td>3 500 – 8 000</td>
+                  </tr>
+                  <tr>
+                     <td>AI / ML интеграция</td>
+                     <td>4 000 – 10 000</td>
+                  </tr>
+                  <tr>
+                     <td>Парсинг / Автоматизация</td>
+                     <td>2 000 – 5 500</td>
+                  </tr>
+                  <tr>
+                     <td>DevOps / Настройка сервера</td>
+                     <td>2 500 – 6 000</td>
+                  </tr>
+                  <tr>
+                     <td>Консультация / Code Review</td>
+                     <td>1 500 – 4 000</td>
+                  </tr>
+               </tbody>
+            </table>
+            <div class="card" style="margin-top: 20px;">
+               💡 <strong>Внимание:</strong> Все цифры ориентировочные. Точная стоимость обсуждается после брифинга и
+               оценки объёма проекта.
+            </div>
+         </div>
+      </section>
+
+      <!-- Контакты -->
+      <section id="contact" aria-label="Контактная информация">
+         <div class="container">
+            <h2 class="section-title">Контакты</h2>
+            <div class="card"
+               style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px;">
+               <div>
+                  <p><strong>📍 Челябинск / Удалённо по РФ</strong></p>
+                  <p>✉️ <a href="mailto:krr12@mail.ru" style="color: inherit;">krr12@mail.ru</a></p>
+                  <p>💬 Telegram: <a href="https://t.me/KafRus74" target="_blank" rel="noopener noreferrer"
+                        style="color: inherit;">@KafRus74</a></p>
+               </div>
+               <div class="contact-links">
+                  <a href="https://github.com/Rustam-Kafeev" target="_blank" rel="noopener noreferrer">🐙 GitHub</a>
+                  <a href="https://github.com/Rustam-Kafeev?tab=repositories" target="_blank"
+                     rel="noopener noreferrer">📁 Все репозитории</a>
+               </div>
+            </div>
+         </div>
+      </section>
+   </main>
+
+   <footer class="footer" role="contentinfo">
+      <div class="container">
+         <p>© 2026 <strong>Рустам Кафеев</strong> — Fullstack-разработчик, Челябинск. Создано с вниманием к качеству
+            кода.</p>
+      </div>
+   </footer>
+
+   <script>
+      function toggleTheme() {
+         const body = document.body;
+         if (body.classList.contains('dark-mode')) {
+            body.classList.remove('dark-mode');
+            body.classList.add('light-mode');
+         } else {
+            body.classList.remove('light-mode');
+            body.classList.add('dark-mode');
+         }
+      }
+
+      // Плавный скролл
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+         anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href === "#") return;
+            const target = document.querySelector(href);
+            if (target) {
+               e.preventDefault();
+               target.scrollIntoView({ behavior: 'smooth' });
             }
-        }
-
-        // Плавный скролл
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const href = this.getAttribute('href');
-                if (href === "#") return;
-                const target = document.querySelector(href);
-                if (target) {
-                    e.preventDefault();
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-    </script>
+         });
+      });
+   </script>
 </body>
 
 </html>
